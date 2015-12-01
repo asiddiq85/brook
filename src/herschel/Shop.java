@@ -10,8 +10,10 @@ public class Shop {
 	
 	public void selectRadioButton(WebDriver driver, String category){
 		driver.findElement(By.linkText("All")).click();
-		List<WebElement>checkBoxes = driver.findElements(By.cssSelector(".collection-name> a"));					
-		for(WebElement checkbox : checkBoxes){			
+		List<WebElement> checkBoxes = driver.findElements(By.cssSelector(".collection-name> a"));
+		
+		for(WebElement checkbox : checkBoxes){
+			
 			if(checkbox.getAttribute("title").equals(category)){
 				checkbox.click();
 				break;
@@ -41,11 +43,7 @@ public class Shop {
 		String priceCurrency = driver.findElement(By.cssSelector("p[class*='product-price']")).getText();
 		return priceCurrency;
 	}
-	public void addToCart(WebDriver driver){
-//		WebDriverWait wait = new WebDriverWait(driver, 30);
-//		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("product-add")));
-		driver.findElement(By.cssSelector("input[value*='Add To Cart']")).click();
-	}	
+	
 	
 	public void checkOut(WebDriver driver){
 		driver.findElement(By.id("open-cart")).click();

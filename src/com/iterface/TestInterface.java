@@ -64,6 +64,8 @@ public class TestInterface {
 		 * is it a good idea? is there a better way to do this? 
 		 */
 		GeometriShapes gs = new Circle(4.0);
+		
+		List<String> l = new ArrayList<String>();
 			
 		System.out.println(gs.getArea());
 		

@@ -1,0 +1,53 @@
+Problem 1: The following incomplete code will count the duplicate characters in the hard coded string.
+
+	Map <Character, Integer> hash = new HashMap<Character, Integer>();
+				
+		String str = "When the winter leaves the Australians, the winter hits us.";
+		
+		char[] chArray = str.toCharArray();
+		
+		int counter = 1;
+		
+		for(Character ch : chArray){
+			
+			if(hash.containsKey(ch)){
+				counter = counter +1;				
+			}else{
+				hash.put(ch, counter);
+			}
+									
+		}
+		System.out.println(hash);
+		return hash;
+
+Your task is to generalize it; which is to create a method which will accept a given string 
+and you will return a Map with the duplicate characters and their occurrences. Your return should 
+be something like this:  {a=8, A=14, i=3, l=7, , r=6, s=9, u=14, v=8, w=3}
+Hint: your method signature should look like this: 
+public Map<FirstDataType, SecondDataType> countCharacterOccurence(String string);
+
+Problem 2: Write a function which returns a given number in reverse order. For example, 
+if the given number is 1234567890, you will return 0987654321.
+Hint: you will need a while loop. Think about number%10 and number/10;
+
+Problem 3: Write a java program (or a method) to check if a given number is Armstrong number.
+Your method should return true or false to state if it's Armstrong or not. 
+An armstrong number is a 3 digit number which is the sum of each digit raised to the power or 3
+and then add the sum. The sum must equal to the number give. For example, 371 is an Armstrong number
+because (1*1*1 + 3*3*3 + 7*7*7 ) = 371. 
+
+Problem 4: Write a java program to swap 2 given numbers. So, if I give you:
+int i = 10; int j = 20; your end result should be: i = 20 and j = 10.
+Hint: use a third variable to hold the value temporarily. 
+Also, solve the problem without using a 3rd variable. Hint: add the numbers and substract one from the sum.
+What about swapping two string values.
+
+Problem 5: Write a program to find out if a given number is prime or not. 
+A prime number is divisible by 1 and itself.
+
+Problem 6: Write a program to find the sum of all the prime numbers between 1 and 1000.
+Hint: create a boolean type method named: isPrime which will tell you if a number is prime or not.
+Call that method inside your code (essentially a loop from 1 to 1000).
+
+
+	

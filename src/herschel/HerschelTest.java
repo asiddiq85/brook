@@ -7,15 +7,17 @@ import java.util.Map;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
+
 import com.brookstone.ContextChooser;
 import com.gargoylesoftware.htmlunit.ElementNotFoundException;
-import junit.framework.Assert;
 
 public class HerschelTest {
 	
@@ -33,34 +35,57 @@ public class HerschelTest {
 		
 		driver.get(prop.getProperty("url"));  // navigates to a URL
 		driver.manage().window().maximize(); // maximize the browser
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);		
+		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);		
 		driver.findElement(By.id("submit")).click();
 		
 		ContextChooser cc = new ContextChooser("Bahamas", "Taka");
 		cc.contextChooser(driver);
 		cc.continueShopping(driver);
+		Thread.sleep(5000);
+		
+		driver.findElement(By.linkText("All")).click();
+		
+		List<WebElement> checkboxedLinkes =  driver.findElements(By.cssSelector(".collection-name> a"));
+		
+		for(WebElement element : checkboxedLinkes){
+			System.out.println(element.getAttribute("title"));
+			System.out.println(element.getAttribute("href"));
+			
+		}
+		
+		Actions action = new Actions(driver);
+		WebElement allLink  = driver.findElement(By.linkText("All"));
+		action.moveToElement(allLink);
+		
+		Alert alert = driver.switchTo().alert();
+		alert.accept();
+		alert.dismiss();
 		
 		
 		
-		LinkTextVerification links = new LinkTextVerification(driver);
-		Assert.assertEquals(links.contactLink(),"http://shop.borderfree.com/help");
-		Assert.assertEquals(links.shippingLink(), "http://shop.borderfree.com/help");
-		Assert.assertEquals(links.returnLink(), "http://shop.borderfree.com/help");
 		
 		
 		
-		Shop shop = new Shop();
-		shop.selectRadioButton(driver, "Pouches");
-		shop.selectAPouch(driver);
 		
-		
-		Assert.assertTrue(shop.getPriceCurrency(driver).contains("BDT"));
-		shop.addToCart(driver);
-		
-		shop.checkOut(driver);
-		
-		driver.quit();
-		System.out.println("TEST PASSED...");
+//		LinkTextVerification links = new LinkTextVerification(driver);
+//		Assert.assertEquals(links.contactLink(),"http://shop.borderfree.com/help");
+//		Assert.assertEquals(links.shippingLink(), "http://shop.borderfree.com/help");
+//		Assert.assertEquals(links.returnLink(), "http://shop.borderfree.com/help");
+//		
+//		
+//		
+//		Shop shop = new Shop();
+//		shop.selectRadioButton(driver, "Pouches");
+//		shop.selectAPouch(driver);
+//		
+//		
+//		Assert.assertTrue(shop.getPriceCurrency(driver).contains("BDT"));
+//		shop.addToCart(driver);
+//		
+//		shop.checkOut(driver);
+//		
+//		driver.quit();
+//		System.out.println("TEST PASSED...");
 	}
 	
 	

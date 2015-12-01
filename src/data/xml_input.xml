@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<message>
+  <payload>
+    <setCheckoutSessionRequest id="1EBF43F4-BB84-11E4-A084-3AD5DD72F1E0">
+      <domesticSession merchantId="5100">
+        <domesticBasket>
+          <basketItems>
+            <basketItem sku="3805">
+              <quantity>1</quantity>
+              <pricing>
+                <listPrice>100</listPrice>
+                <itemDiscount>0</itemDiscount>
+                <salePrice>100</salePrice>
+                <productExtraShipping>1</productExtraShipping>
+                <productExtraHandling>2</productExtraHandling>
+              </pricing>
+              <display>
+                <name>Name (TPL)</name>
+                <description>Description</description>
+                <productUrl>http://www.afloral.com/Floral-Supplies/Bouquet-Jewelry-and-Lights/BouquetHolderwithSlantedHandleforFreshFlowersStandard</productUrl>
+                <!--imageUrl>http://172.21.1.174/images/SKU-00000.png</imageUrl-->
+                <color>Color</color>
+                <size>Size</size>
+                <attributes>Attribute: Value</attributes>
+                <inventory>Inventory</inventory>
+              </display>
+              <customData>{
+                "quantity" : "1"
+              }</customData>
+              <!--countryOfFulfillment>US</countryOfFulfillment-->
+            </basketItem>
+
+          </basketItems>
+          <basketTotal>
+            <totalSalePrice>100</totalSalePrice>
+            <orderDiscount>0</orderDiscount>
+            <totalProductExtraShipping>1</totalProductExtraShipping>
+            <totalProductExtraHandling>2</totalProductExtraHandling>
+            <totalPrice>103</totalPrice>
+          </basketTotal>
+          <customData>{}
+          </customData>
+        </domesticBasket>
+        <domesticShippingMethod>
+          <domesticShippingPrice>4</domesticShippingPrice>
+          <domesticHandlingPrice>8</domesticHandlingPrice>
+          <extraInsurancePrice>16</extraInsurancePrice>
+          <deliveryPromiseMinimum>1</deliveryPromiseMinimum>
+          <deliveryPromiseMaximum>2</deliveryPromiseMaximum>
+        </domesticShippingMethod>
+
+        <sessionDetails>
+          <buyerSessionId>1EBF43F4-BB84-11E4-A084-3AD5DD72F1E0</buyerSessionId>
+          <buyerIpAddress>10.100.105.16</buyerIpAddress>
+          <!--affiliateNetwork id="LS">
+            <merchantId>merchantId</merchantId>
+            <siteId>siteId</siteId>
+            <timestamp>1970-01-01T00:00:00.000+00:00</timestamp>
+          </affiliateNetwork-->
+          <checkoutUrls>
+            <successUrl>http://172.21.1.174/cgi-bin/e3/success.pl?buyerSessionId=1EBF43F4-BB84-11E4-A084-3AD5DD72F1E0</successUrl>
+            <pendingUrl>http://172.21.1.174/cgi-bin/e3/pending.pl?buyerSessionId=1EBF43F4-BB84-11E4-A084-3AD5DD72F1E0</pendingUrl>
+            <failureUrl>http://172.21.1.174/cgi-bin/e3/failure.pl?buyerSessionId=1EBF43F4-BB84-11E4-A084-3AD5DD72F1E0</failureUrl>
+            <callbackUrl>http://ardorafsh.com/cgi-bin/51/callbackUrl.pl?merchantOrderId=1424713685</callbackUrl>
+            <basketUrl>https://172.21.1.174/cgi-bin/e3/setCheckoutSession.pl?buyerSessionId=1EBF43F4-BB84-11E4-A084-3AD5DD72F1E0</basketUrl>
+            <contextChooserPageUrl>http://172.21.1.174/cgi-bin/e3/setCheckoutSession.pl?buyerSessionId=1EBF43F4-BB84-11E4-A084-3AD5DD72F1E0</contextChooserPageUrl>
+            <usCartStartPageUrl>http://172.21.1.174/cgi-bin/e3/setCheckoutSession.pl?buyerSessionId=1EBF43F4-BB84-11E4-A084-3AD5DD72F1E0</usCartStartPageUrl>
+            <paymentUrls>
+              <payPalUrls>
+                <returnUrl>http://172.21.1.174/cgi-bin/e3/alternatePayment1.pl?ppStatus=ok&amp;buyerSessionId=1EBF43F4-BB84-11E4-A084-3AD5DD72F1E0</returnUrl>
+                <cancelUrl>http://172.21.1.174/cgi-bin/e3/alternatePayment1.pl?ppStatus=cancel&amp;buyerSessionId=1EBF43F4-BB84-11E4-A084-3AD5DD72F1E0</cancelUrl>
+                <headerLogoUrl>http://172.21.1.174/e3/logo/header.png</headerLogoUrl>
+              </payPalUrls>
+            </paymentUrls>
+          </checkoutUrls>
+        </sessionDetails>
+        <orderProperties>
+          <currencyQuoteId>-1</currencyQuoteId>
+          <!--lcpRuleId></lcpRuleId-->
+          <merchantOrderId>1424713685</merchantOrderId>
+          <merchantOrderRef></merchantOrderRef>
+        </orderProperties>
+      </domesticSession>
+      <buyerSession>
+        <shipToAddress merchantProfileId="ship-1424713685" isPoBox="false" isReadOnly="false">
+          <firstName>shipFirstName</firstName>
+          <middleInitials>S</middleInitials>
+          <lastName>shipLastName</lastName>
+          <addressLine1>shipAddressLine1</addressLine1>
+          <addressLine2></addressLine2>
+          <addressLine3></addressLine3>
+          <city>shipCity</city>
+          <region>AB</region>
+          <postalCode>T0L0C0</postalCode>
+          <countryCode>AU</countryCode>
+          <email>ship@example.com</email>
+          <primaryPhone>1-416-555-1212</primaryPhone>
+          <secondaryPhone>1-416-555-1313</secondaryPhone>
+          <cpf></cpf>
+        </shipToAddress>
+        <billToAddress merchantProfileId="bill-1424713685" isPoBox="false" isReadOnly="false">
+          <firstName>billFirstName</firstName>
+          <middleInitials>B</middleInitials>
+          <lastName>billLastName</lastName>
+          <addressLine1>billAdressLine1</addressLine1>
+          <addressLine2></addressLine2>
+          <addressLine3></addressLine3>
+          <city>billCity</city>
+          <region>NL</region>
+          <postalCode>A1B2C3</postalCode>
+          <countryCode>AU</countryCode>
+          <email>bill@example.com</email>
+          <primaryPhone>1-416-555-1414</primaryPhone>
+          <secondaryPhone>1-416-555-1515</secondaryPhone>
+          <cpf></cpf>
+        </billToAddress>
+        <buyerPreferences>
+          <language>EN</language>
+          <buyerCurrency>USD</buyerCurrency>
+          <couponCode></couponCode>
+        </buyerPreferences>
+      </buyerSession>
+    </setCheckoutSessionRequest>
+  </payload>
+</message>
